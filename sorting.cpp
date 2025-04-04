@@ -28,7 +28,7 @@ struct stack {
         TNode* spt = top;
         lt = spt->l;
         rt = spt->r;
-        top = top->a;
+        top = spt->a;
         delete spt;
     }
 };
@@ -72,9 +72,9 @@ int main() {
 }
 
 void puz(Car arr[],int &n) {
-    for (int i = 0; i < n; i++) {
-        for (int j = n-1; j <=i; j++) {
-            if (arr[i].speed > arr[j].speed) swap(arr[i], arr[j]);
+    for (int i = 1; i < n; i++) {
+        for (int j = n-1; j >=i; j--) {
+            if (arr[j-1].speed > arr[j].speed) swap(arr[j-1], arr[j]);
         }
     }
 
