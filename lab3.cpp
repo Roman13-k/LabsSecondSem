@@ -41,7 +41,7 @@ void choise(Car[],int);
 
 int main(){
 	int n;
-	cout << "Kol auto: ";
+	/*cout << "Kol auto: ";
 	cin >> n;
 
 	cout << "Inf of auto: " << endl;
@@ -49,24 +49,24 @@ int main(){
 	for (int i = 0; i < n; i++) {
 		cout << "Mark:";
 		cin >> cars[i].mark;
-		cout << "Mark:";
+		cout << "Speed:";
 		cin >> cars[i].speed;
-		cout << "Mark:";
+		cout << "V:";
 		cin >> cars[i].v;
-		cout << "Mark:";
+		cout << "Year:";
 		cin >> cars[i].year;
 		cout << endl;
-	}
+	}*/
 
-	/*n = 6;
+	n = 6;
 	Car cars[] = {
-	{"Audi", 2009, 300, 3},
+	{"Audi", 2001, 300, 3},
 	{"BMW", 2000, 240, 12},
-	{"Mers", 2023, 267, 3.23},
+	{"Mers", 200023, 267, 3.23},
 	{"Dasd", 2003, 223, 432},
-	{"Faasd", 20043, 753, 432},
-	{"Popasd", 20054, 234, 43},
-	};*/
+	{"Faasd", 2003, 753, 432},
+	{"Popasd", 2054, 234, 43},
+	};
 
 	int k;
 	cout << "Sort: 1-QS, 2-choise: ";
@@ -84,7 +84,7 @@ int main(){
 	}
 	default: {
 		cout << "Nevern vbr";
-		return;
+		return 1;
 	}
 	}
 	
@@ -125,7 +125,7 @@ void QS(Car cars[], int n) {
 					i++;
 					j--;
 				}
-
+			}
 				if (j - left < right - i) {
 					if (i < right) st.push(i, right);
 					right = j;
@@ -134,7 +134,7 @@ void QS(Car cars[], int n) {
 					if (left < j) st.push(left, j);
 					left = i;
 				}
-			}
+			
 		}
 	}
 }
